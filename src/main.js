@@ -4,9 +4,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'amfe-flexible'
-import './assets/icon/inconfont.css'
+import Scroller from '@/components/BScroller'
 
 Vue.config.productionTip = false
+Vue.component('Scroller', Scroller)
 
 new Vue({
   router,

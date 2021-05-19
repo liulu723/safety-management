@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <i class="iconfont icondaiban"></i>
+    zhuye
   </div>
 </template>
 

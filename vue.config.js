@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV == "production" ? "./" : "/",
   css: {
     loaderOptions: {
       stylus: {
@@ -6,6 +7,11 @@ module.exports = {
         'import': [
           './src/theme'
         ]
+      },
+      postcss: {
+        plugins: [require("postcss-px2rem")({
+          remUnit: 75
+        })]
       }
     }
   },
@@ -14,5 +20,10 @@ module.exports = {
       postCompile: true,
       theme: true
     }
+  },
+  chainWebpack: config => {
+    // GraphQL Loader
+    config.module
+
   }
 }
