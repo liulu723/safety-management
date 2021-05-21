@@ -8,6 +8,7 @@
       :key="i"
       :to="item.link"
       @click.native="select()"
+      :style="{'color':i==index?'rgb(94, 122, 242)':'rgb(126, 140, 141)'}"
     >
       <i :class="item.class"></i>
       <span>{{ item.name }}</span>
@@ -91,7 +92,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   bottom: 0;
@@ -109,6 +110,9 @@ export default {
     flex-direction: column;
     span {
       margin-top: 5px;
+    }
+    i{
+      font-size: 36px;
     }
   }
 }

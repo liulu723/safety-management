@@ -1,16 +1,44 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2520885 */
-  src: url('//at.alicdn.com/t/font_2520885_if3qrc0q3bn.woff2?t=1620896271298') format('woff2'),
-       url('//at.alicdn.com/t/font_2520885_if3qrc0q3bn.woff?t=1620896271298') format('woff'),
-       url('//at.alicdn.com/t/font_2520885_if3qrc0q3bn.ttf?t=1620896271298') format('truetype');
+  src: url('iconfont.woff2?t=1621498942865') format('woff2'),
+       url('iconfont.woff?t=1621498942865') format('woff'),
+       url('iconfont.ttf?t=1621498942865') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 32px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.iconiconfontmima:before {
+  content: "\e616";
+}
+
+.iconxiaoxi:before {
+  content: "\e673";
+}
+
+.iconkehu:before {
+  content: "\e603";
+}
+
+.iconjianchajihua:before {
+  content: "\e621";
+}
+
+.iconlianxiren:before {
+  content: "\e618";
+}
+
+.iconricheng:before {
+  content: "\e613";
+}
+
+.iconguanyuwomen:before {
+  content: "\e610";
 }
 
 .icondingwei:before {
@@ -56,3 +84,4 @@
 .iconshouyebeifen:before {
   content: "\e62a";
 }
+

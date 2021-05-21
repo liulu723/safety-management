@@ -1,73 +1,150 @@
 <template>
- <div class="movie_body" ref="movie_body">
-        <Scroller :handleToScroll="handleToScroll" :handleToTouchEnd="handleToTouchEnd">
-            <ul>
-                <li class="pullDown">{{ pullDownMsg }}</li>
-                <li v-for="item in movieList" :key="item.id">
-                    <div class="pic_show" @tap="handleToDetail"></div>
-                    <div class="info_list">
-                        <h2>{{ item.nm }} </h2>
-                        <p>观众评 <span class="grade">{{ item.sc }}</span></p>
-                        <p>主演: {{ item.star }}</p>
-                        <p>{{ item.showInfo }}</p>
-                    </div>
-                    <div class="btn_mall">
-                        购票
-                    </div>
-                </li>
-            </ul>
-        </Scroller>
+  <BScroller
+    :handleToScroll="handleToScroll"
+    :handleToTouchEnd="handleToTouchEnd"
+    class="main"
+  >
+    <bs-background></bs-background>
+    <div class="user-info">
+      <img src="@/public/img/logo.png" alt="" class="user-bg" />
+      <div>
+        <div class="user-info-top">
+          <p>{{ userInfo.name }}</p>
+          <span>{{ userInfo.label }}</span>
+        </div>
+        <div class="user-company-bottom">
+          <span>{{ userInfo.company }}</span>
+          |
+          <span>{{ userInfo.companyName }}</span>
+        </div>
+      </div>
     </div>
+    <ul class="item-list">
+      <li
+        v-for="(item, index) in itemList"
+        :key="index"
+        :style="{ 'margin-bottom': item.mb ? item.mb : '1px' }"
+      >
+        <router-link :to="{ path: item.link }">
+          <i :class="['iconfont', item.icon]"></i>
+          <p>{{ item.title }}</p>
+          <span
+            class="info-no"
+            :style="{ display: item.infoNo ? 'inline-block' : ' none' }"
+            >{{ item.infoNo }}</span
+          >
+          <i class="cubeic-arrow"></i>
+        </router-link>
+      </li>
+    </ul>
+    <cube-button @click="logout" class="logout">退出登录</cube-button>
+  </BScroller>
 </template>
 <script>
+import BSBackground from '@/components/BSBackground'
 export default {
-  name:'User',
-      data() {
-        return {
-            movieList: [],
-            pullDownMsg: '',
-        }
-    },
-    mounted() {
-    },
-    methods: {
-        handleToDetail () {
-            console.log('handleToDetail');
+  name: "User",
+  data() {
+    return {
+      itemList: [
+        {
+          icon: "iconxiaoxi",
+          title: "我的消息",
+          infoNo: "3",
+          link: "/index",
         },
-        handleToScroll (pos) {
-            if ( pos.y > 30 ) {
-                this.pullDownMsg = '正在更新中...';
-            }
+        {
+          icon: "iconkehu",
+          title: "我的客户",
+          infoNo: "",
+          link: "index",
         },
-        handleToTouchEnd (pos) {
-            if ( pos.y > 30 ) {
-                this.axios.get('/api/movieOnInfoList?cityId=10').then( (res) => {
-                    var msg = res.data.msg;
-                    if ( msg === 'ok') {
-                        this.pullDownMsg = '更新完成';
-                        setTimeout(() => {
-                            this.movieList = res.data.data.movieList;
-                            this.pullDownMsg = ''
-                        }, 1000);
-                    }
-                });
-            }
-        }
-    }
-}
+        {
+          icon: "iconlianxiren",
+          title: "我的联系人",
+          infoNo: "",
+          link: "",
+        },
+        {
+          icon: "iconricheng",
+          title: "我的日程",
+          infoNo: "",
+          mb: "12px",
+          link: "",
+        },
+        {
+          icon: "iconiconfontmima",
+          title: "修改密码",
+          infoNo: "",
+          mb: "12px",
+          link: "",
+        },
+        {
+          icon: "iconguanyuwomen",
+          title: "关于我们",
+          infoNo: "",
+          mb: "",
+          link: "",
+        },
+        {
+          icon: "iconjianchajihua",
+          title: "版本检查",
+          infoNo: "",
+          mb: "",
+          link: "",
+        },
+      ],
+      userInfo: {
+        name: "王亚峰",
+        label: "区域经理",
+        company: "深圳分公司",
+        companyName: "上海晓新科技有限公司",
+      },
+    };
+  },
+  mounted() {
+    console.log(this.$store.commit["changeState"]);
+  },
+  methods: {
+    handleToDetail() {
+      console.log("handleToDetail");
+    },
+    handleToScroll(pos) {
+      if (pos.y > 30) {
+        this.pullDownMsg = "正在更新中...";
+      }
+    },
+    handleToTouchEnd() {},
+    logout() {
+      this.$createDialog({
+        type: "confirm",
+        title: "确定退出登录？",
+        icon: "cubeic-alert",
+        confirmBtn: {
+          text: "确定",
+          active: true,
+          disabled: false,
+        },
+        cancelBtn: {
+          text: "取消",
+          active: true,
+          disabled: false,
+        },
+        onConfirm: () => {
+          // this.$store
+          console.log(this.$store);
+          this.$store._mutations["changeLoginState"][0](false);
+          this.$router.push("/login");
+        },
+        onCancel: () => {},
+      }).show();
+    },
+  },
+  components:{
+    'bs-background':BSBackground
+  }
+};
 </script>
-<style scoped>
-.movie_body{ flex:1; overflow:auto;}
-.movie_body ul{ margin:0 12px; overflow: hidden;}
-.movie_body ul li{ margin-top:12px; display: flex; align-items:center; border-bottom: 1px #e6e6e6 solid; padding-bottom: 10px;}
-.movie_body .pic_show{ width:64px; height: 90px;}
-.movie_body .pic_show img{ width:100%;}
-.movie_body .info_list { margin-left: 10px; flex:1; position: relative;}
-.movie_body .info_list h2{ font-size: 17px; line-height: 24px; width:150px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
-.movie_body .info_list p{ font-size: 13px; color:#666; line-height: 22px; width:200px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
-.movie_body .info_list .grade{ font-weight: 700; color: #faaf00; font-size: 15px;}
-.movie_body .info_list img{ width:50px; position: absolute; right:10px; top: 5px;}
-.movie_body .btn_mall , .movie_body .btn_pre{ width:47px; height:27px; line-height: 28px; text-align: center; background-color: #f03d37; color: #fff; border-radius: 4px; font-size: 12px; cursor: pointer;}
-.movie_body .btn_pre{ background-color: #3c9fe6;}
-.movie_body .pullDown{ margin: 0; padding: 0; border: none;}
+<style scoped lang="less">
+@import "@/static/css/user/user.less";
 </style>

@@ -46,7 +46,6 @@ const fetchData = (to, from,next) => {
       ...to.params
     }
     : undefined
-    console.log(paylaod)
   //let initAction = to.name && to.name.toLowerCase()
   // if (store._actions[initAction]) {
   //   store.commit('loading', true)

@@ -24,6 +24,8 @@ module.exports = {
   chainWebpack: config => {
     // GraphQL Loader
     config.module
+  },
 
-  }
+  lintOnSave: false
+
 }

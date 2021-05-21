@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="bg"></div>
+    <bs-background></bs-background>
   <cube-form  class="base_form">
       <cube-form-group>
         <cube-form-item>
@@ -32,6 +32,7 @@
 </template>
 <script>
 import { mapState, mapMutations } from "vuex";
+import BSBackground from '@/components/BSBackground'
 export default {
   name: "Login",
   data() {
@@ -47,6 +48,14 @@ export default {
   created() {
     console.log(this.$store._actions);
   },
+  beforeCreate () {
+	// 修改背景色
+    document.querySelector('body').setAttribute('style', 'background-color:#fff')
+},
+beforeDestroy () {
+	// 销毁背景色
+   document.querySelector('body').removeAttribute('style')
+},
   computed: {
     ...mapState("foot", {
       state: "state",
@@ -55,22 +64,23 @@ export default {
   methods: {
     submitHandler(e) {
       e.preventDefault();
-      console.log(this.user, this.password);
       this.$store._actions.login[0]({user:this.user, password:this.password}).then((res) => {
         if (res) {
           this.$router.push("/index");
         }
       });
     },
-    resetHandler(e) {
-      console.log("reset", e);
+    resetHandler() {
     },
     ...mapMutations({
       login: "login",
     }),
   },
+  components:{
+    'bs-background':BSBackground
+  }
 };
 </script>
 <style scoped lang="less">
-@import "@/static/css/login.less";
+@import "@/static/css/login/login.less";
 </style>

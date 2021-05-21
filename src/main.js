@@ -4,10 +4,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'amfe-flexible'
-import Scroller from '@/components/BScroller'
+import BScroller from '@/components/BScroller'
+import './assets/iconfont/iconfont.css';
 
 Vue.config.productionTip = false
-Vue.component('Scroller', Scroller)
+Vue.component('BScroller', BScroller)
 
 new Vue({
   router,
