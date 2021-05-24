@@ -8,7 +8,7 @@
       :key="i"
       :to="item.link"
       @click.native="select()"
-      :style="{'color':i==index?'rgb(94, 122, 242)':'rgb(126, 140, 141)'}"
+      :style="{'color':i==index?'rgb(0, 121, 254)':'rgb(126, 140, 141)'}"
     >
       <i :class="item.class"></i>
       <span>{{ item.name }}</span>
@@ -22,37 +22,31 @@ export default {
     return {
       footList: [
         {
-          name: "数据统计",
+          name: "首页",
           icon: "iconshouyexuanzhong",
           selectIcon: "iconshouyebeifen",
-          link: "/statistics",
-        },
-        {
-          name: "客户公司",
-          icon: "iconbaojing",
-          selectIcon: "iconbj",
-          link: "/company",
-        },
-        {
-          name: "",
-          icon: "icondingwei1",
-          selectIcon: "icondingwei",
           link: "/index",
         },
         {
-          name: "用户申请",
-          icon: "icondaiban",
-          selectIcon: "icondaiban1",
-          link: "/apply",
+          name: "报警",
+          icon: "iconbaojing",
+          selectIcon: "iconbj",
+          link: "/call",
         },
         {
-          name: "个人中心",
+          name: "检测",
+          icon: "iconjiance",
+          selectIcon: "iconjiancebaogao",
+          link: "/detection",
+        },
+        {
+          name: "我的",
           icon: "iconwode",
           selectIcon: "iconlianhe4",
           link: "/user",
         },
       ],
-      index: 1,
+      index: 0,
     };
   },
   created() {},
@@ -81,7 +75,7 @@ export default {
   methods: {
     select() {
       let routeSplit = this.$route.fullPath.split("/");
-      let index = ["statistics", "company", "index", "apply", "user"].indexOf(
+      let index = ["index","call", "detection",  "user"].indexOf(
         routeSplit[1]
       );
       this.index = index;

@@ -48,51 +48,49 @@ export default {
     return {
       itemList: [
         {
-          icon: "iconxiaoxi",
-          title: "我的消息",
-          infoNo: "3",
-          link: "/index",
-        },
-        {
           icon: "iconkehu",
-          title: "我的客户",
+          title: "我的工单",
           infoNo: "",
           link: "index",
         },
         {
           icon: "iconlianxiren",
-          title: "我的联系人",
+          title: "我的报销",
           infoNo: "",
           link: "",
         },
         {
           icon: "iconricheng",
-          title: "我的日程",
+          title: "工单详情",
           infoNo: "",
-          mb: "12px",
           link: "",
         },
         {
           icon: "iconiconfontmima",
-          title: "修改密码",
+          title: "工单申报",
           infoNo: "",
-          mb: "12px",
           link: "",
         },
         {
           icon: "iconguanyuwomen",
-          title: "关于我们",
+          title: "我的审批",
           infoNo: "",
           mb: "",
           link: "",
         },
         {
           icon: "iconjianchajihua",
-          title: "版本检查",
+          title: "统计",
           infoNo: "",
-          mb: "",
+          mb: "12px",
           link: "",
         },
+        {
+          icon: "iconxiaoxi",
+          title: "我的消息",
+          infoNo: "3",
+          link: "/index",
+        }
       ],
       userInfo: {
         name: "王亚峰",

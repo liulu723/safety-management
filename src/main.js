@@ -6,7 +6,6 @@ import store from './store'
 import 'amfe-flexible'
 import BScroller from '@/components/BScroller'
 import './assets/iconfont/iconfont.css';
-
 Vue.config.productionTip = false
 Vue.component('BScroller', BScroller)
 
