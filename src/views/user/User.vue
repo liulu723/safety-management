@@ -51,7 +51,7 @@ export default {
           icon: "iconkehu",
           title: "我的工单",
           infoNo: "",
-          link: "index",
+          link: "mytask",
         },
         {
           icon: "iconlianxiren",
@@ -63,7 +63,7 @@ export default {
           icon: "iconricheng",
           title: "工单详情",
           infoNo: "",
-          link: "",
+          link: "/detailtask",
         },
         {
           icon: "iconiconfontmima",
@@ -76,7 +76,7 @@ export default {
           title: "我的审批",
           infoNo: "",
           mb: "",
-          link: "",
+          link: "/myapproval",
         },
         {
           icon: "iconjianchajihua",
