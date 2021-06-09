@@ -33,7 +33,7 @@ import BaseSearch from '@/components/BaseSearch'
 import BsBackground from '@/components/BSBackground'
 
 export default {
-  name:'mytask',
+  name:'Task',
   data(){
     return{
       taskNum:[

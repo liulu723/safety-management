@@ -9,6 +9,7 @@
 import BaseSearch from '@/components/BaseSearch'
 import BaseSelect from '@/components/BaseSelect'
 export default {
+  name:'Approval',
   data(){
     return{
       // result: ['a', 'b'],

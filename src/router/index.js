@@ -15,9 +15,9 @@ const paths = [
   'company/',
   'apply/',
   'user/',
-  'mytask',
-  'detailtask',
-  'myapproval'
+  'user/task/',
+  'user/approval',
+  'user/detailtask',
 ]
 const routers = paths.map(path => {
   let name = path.replace('*', '').split('/')
@@ -29,6 +29,7 @@ const routers = paths.map(path => {
   let component = () => {
     return import(`@/views/${name[0]}/${name[1]}.vue`)
   }
+  console.log(`@/views/${name[0]}/${name[1]}.vue`)
   return {
     path: `/${path}`,
     name: name[1],
