@@ -29,7 +29,6 @@ const routers = paths.map(path => {
   let component = () => {
     return import(`@/views/${name[0]}/${name[1]}.vue`)
   }
-  console.log(`@/views/${name[0]}/${name[1]}.vue`)
   return {
     path: `/${path}`,
     name: name[1],

@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3262712",
+      "name": "喇叭 公告 消息",
+      "font_class": "labagonggaoxiaoxi",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "9769921",
+      "name": "流程",
+      "font_class": "liucheng",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "21211868",
+      "name": "闪电 电量",
+      "font_class": "shandiandianliang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "613405",
+      "name": "消息_通知",
+      "font_class": "xiaoxitongzhi",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
       "icon_id": "7777784",
       "name": "检测",
       "font_class": "jiance",

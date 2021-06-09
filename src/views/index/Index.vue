@@ -1,15 +1,121 @@
 <template>
-  <div>
+  <BScroller class="main">
     <base-search></base-search>
-  </div>
+    <div class="nav-bar">
+      <cube-tab-bar
+        v-model="selectedLabelDefault"
+        :data="tabs"
+        @click="clickHandler"
+        @change="changeHandler"
+      >
+      </cube-tab-bar>
+    </div>
+    <div class="num-detail">
+      <img src="@/public/img/logo.png" alt="" />
+      <ul>
+        <li v-for="(item, index) in numDetail" :key="index">
+          <span>{{ item.title }}:{{ item.num }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="userList">
+      <ul>
+        <li v-for="(item, index) in userList" :key="index">
+          <p>{{ item.title }}</p>
+          <span>{{ item.num }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="warningStatistics">
+      <p>报警统计：</p>
+      <div>
+        <ul>
+          <li>当日</li>
+          <li>昨日</li>
+          <li>7日</li>
+        </ul>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </BScroller>
 </template>
 
 <script>
-import BaseSearch from '@/components/BaseSearch'
+import BaseSearch from "@/components/BaseSearch";
+import BSBackground from "@/components/BSBackground";
 export default {
-name:'index',
-components:{
-  BaseSearch
-}
-}
+  name: "index",
+  data() {
+    return {
+      selectedLabelDefault: "当前报警",
+      tabs: [
+        {
+          label: "当前报警",
+          icon: "iconfont iconlabagonggaoxiaoxi",
+        },
+        {
+          label: "当前预警",
+          icon: "iconfont iconbaojing",
+        },
+        {
+          label: "网咯中断",
+          icon: "iconfont iconshandiandianliang",
+        },
+        {
+          label: "我的流程",
+          icon: "iconfont iconliucheng",
+        },
+      ],
+      numDetail: [
+        {
+          title: "报警",
+          num: "4",
+        },
+        {
+          title: "预警",
+          num: "2",
+        },
+        {
+          title: "工单",
+          num: "2",
+        },
+        {
+          title: "中断",
+          num: "2",
+        },
+      ],
+      userList: [
+        {
+          title: "CPU使用率",
+          num: "TOPN1",
+        },
+        {
+          title: "内存使用率",
+          num: "TOPN2",
+        },
+        {
+          title: "进网使用率",
+          num: "TOPN3",
+        },
+      ],
+    };
+  },
+  methods: {
+    clickHandler(label) {
+      console.log(label);
+    },
+    changeHandler(label) {
+      console.log(label);
+    },
+  },
+  components: {
+    BaseSearch,
+    "bs-background": BSBackground,
+  },
+};
 </script>
+<style scoped lang="less">
+@import "@/static/css/index/index.less";
+</style>

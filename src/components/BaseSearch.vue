@@ -22,13 +22,15 @@ export default {
   display: flex;
   padding: 0.2rem 0.2rem;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 .box {
   width: 2.2rem;
   color: white;
   text-align: center;
   height: 1rem;
-  line-height: 1.1rem;
+  line-height: 1rem;
   background-color: @mianBlueColor;
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
@@ -55,6 +57,5 @@ span {
   font-size: 30px;
   position: relative;
   left: 20px;
-  bottom: 20px;
 }
 </style>
