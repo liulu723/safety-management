@@ -1,23 +1,13 @@
 <template>
   <div>
     <base-search></base-search>
-    <div class="approvalList">
-       <!-- <van-row type="flex" class="lineDisplay"> 
-          <van-col span="4">单号：</van-col>
-          <van-col span="20">KTGD0034</van-col>     
-      </van-row >  -->
-       <!-- <van-checkbox-group v-model="result">
-          <van-checkbox name="a">复选框 a</van-checkbox>
-          <van-checkbox name="b">复选框 b</van-checkbox>
-       </van-checkbox-group> -->
-       <cube-checkbox-group v-model="checkList" :options="options" shape="square" checked-color="selectColor"/>
-    </div>
+    <base-select></base-select>
   </div>
 </template>
 
 <script>
 import BaseSearch from '@/components/BaseSearch'
-
+import BaseSelect from '@/components/BaseSelect'
 export default {
   data(){
     return{
@@ -49,7 +39,8 @@ export default {
     }
   },
   components:{
-    BaseSearch
+    BaseSearch,
+    BaseSelect
   }
 }
 </script>
