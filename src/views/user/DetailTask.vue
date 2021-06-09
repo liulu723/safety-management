@@ -47,7 +47,7 @@
                       </div>
                   </li>
                 </div>
-              </ul>
+              </ul>K=
             </div>
           </div>
         </div>
@@ -60,9 +60,7 @@
 import BaseSearch from '@/components/BaseSearch'
 
 export default {
-  components:{
-    BaseSearch
-  },
+name:'etailTask',
   data(){
      return{
        logisticsList: [
@@ -84,6 +82,9 @@ export default {
         }
       ]
      }
+  },  
+  components:{
+    BaseSearch
   }
 
 }
