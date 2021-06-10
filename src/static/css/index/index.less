@@ -10,28 +10,30 @@
 }
 
 .nav-bar {
-  padding-bottom: 20px;
   border-bottom: 1px solid @subminGreyColor;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
 
   /deep/.cube-tab {
     i {
-      font-size: 36px;
+      font-size: 48px;
     }
 
     div {
+      margin-top: 0.3rem;
       font-size: 28px;
+      height: 36px;
+      line-height: 36px;
     }
   }
 }
 
 .num-detail {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid @subBlackColor;
   padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
 
   img {
     width: 200px;
@@ -39,9 +41,10 @@
 
   ul {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 0.5rem;
     display: flex;
     flex-wrap: wrap;
+
     li {
       background-color: #fff;
       border: 1px solid @subBlackColor;
@@ -50,6 +53,7 @@
       box-sizing: border-box;
       margin: 10px 10px;
       text-align: center;
+
       span {
         height: 60px;
         line-height: 60px;
@@ -59,9 +63,12 @@
 }
 
 .userList {
-  border: 1px  solid @subBlackColor;
+  border: 1px solid @subBlackColor;
+  margin-bottom: 0.5rem;
+
   ul {
     display: flex;
+
     li {
       flex: 1;
       border: 1px solid;
@@ -75,20 +82,24 @@
     }
   }
 }
-.warningStatistics{
-  ul{
+
+.warningStatistics {
+  ul {
     display: flex;
     margin-left: 50%;
     transform: translateX(-50%);
-    li{
+    width: 55%;
+
+    li {
       border: 1px solid @subBlackColor;
       border-right: none;
       width: 1.6rem;
-      height: 0.8rem;
+      height: 0.6rem;
       display: inline-block;
-      line-height: 0.8rem;
+      line-height: 0.6rem;
       text-align: center;
-      &:nth-last-child(1){
+
+      &:nth-last-child(1) {
         border-right: 1px solid @subBlackColor;
       }
     }

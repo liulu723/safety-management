@@ -45,6 +45,7 @@ i {
 }
 .cube-input {
   flex-grow: 1;
+  font-size: 32px;
 }
 /deep/ .cube-input-field {
   padding-left: 0.2rem;

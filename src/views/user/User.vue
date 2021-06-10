@@ -57,7 +57,7 @@ export default {
           icon: "iconlianxiren",
           title: "我的报销",
           infoNo: "",
-          link: "",
+          link: "/user/myexpense",
         },
         {
           icon: "iconricheng",
@@ -83,7 +83,7 @@ export default {
           title: "统计",
           infoNo: "",
           mb: "12px",
-          link: "",
+          link: "/user/statis",
         },
         {
           icon: "iconxiaoxi",
