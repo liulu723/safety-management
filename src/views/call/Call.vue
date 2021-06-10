@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <BScroller class="main">
     <base-search></base-search>
@@ -57,3 +58,15 @@ export default {
 <style scoped lang="less">
 @import "@/static/css/call/call.less";
 </style>
+=======
+<template>
+  <div>
+    报警
+  </div>
+</template>
+<script>
+export default {
+  name:'Call'
+}
+</script>
+>>>>>>> a12425c58f240d1771b08f3a97b5d99a6a2c454e

@@ -1,29 +1,36 @@
 <template>
     <div class="mytask">  
       <base-search></base-search>
-      <bs-background></bs-background>
+      <div class="scroll-list-wrap">
+        <cube-scroll
+          ref="scroll">
+          <bs-background></bs-background>
 
-      <ul class="taskList">
-        <li v-for="(item,index) in taskNum" :key="index">
-          <span>{{item.name}}</span>
-          :
-          <span>{{item.count}}</span>
-        </li> 
-      </ul>
-      <div class="notification">
-        <img src="~@/public/img/notification.png" alt="">
-        <span>消息通知</span>
-      </div>
-      <div class="eventBtn">
-        <van-button class="btnItem" type="info">事件</van-button>
-        <van-button class="btnItem" type="info">问题</van-button>
-        <van-button class="btnItem" type="info">变更</van-button>
-        <van-button class="btnItem" type="info">发布</van-button>
-        <van-button class="btnItem" type="info">我的审批</van-button>
-        <van-button class="btnItem" type="info">我的报单</van-button>
-        <van-button class="btnItem" type="info">统计</van-button>
+          <ul class="taskList">
+            <li v-for="(item,index) in taskNum" :key="index">
+              <span>{{item.name}}</span>
+              :
+              <span>{{item.count}}</span>
+            </li> 
+          </ul>
+          <div class="notification">
+            <img src="~@/public/img/notification.png" alt="">
+            <span>消息通知</span>
+          </div>
+          <div class="eventBtn">
+            <van-button class="btnItem" type="info">事件</van-button>
+            <van-button class="btnItem" type="info">问题</van-button>
+            <van-button class="btnItem" type="info">变更</van-button>
+            <van-button class="btnItem" type="info">发布</van-button>
+            <van-button class="btnItem" type="info">我的审批</van-button>
+            <van-button class="btnItem" type="info">我的报单</van-button>
+            <van-button class="btnItem" type="info">统计</van-button>
 
+          </div>
+         
+        </cube-scroll>
       </div>
+      
     </div>
   
 </template>

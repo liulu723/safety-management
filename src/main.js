@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Vue from 'vue'
 import './cube-ui'
 import App from './App.vue'
@@ -21,3 +22,30 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+=======
+import Vue from 'vue'
+import './cube-ui'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import 'amfe-flexible'
+import BScroller from '@/components/BScroller'
+import './assets/iconfont/iconfont.css';
+import Vant from 'vant';
+import { RadioGroup, Radio } from 'vant';
+import 'vant/lib/index.css';
+import * as echarts from 'echarts';
+Vue.prototype.$echarts = echarts
+
+Vue.use(Radio);
+Vue.use(RadioGroup);
+Vue.use(Vant);
+Vue.config.productionTip = false
+Vue.component('BScroller', BScroller)
+
+new Vue({
+    router,
+    store,
+    render: h => h(App)
+}).$mount('#app')
+>>>>>>> a12425c58f240d1771b08f3a97b5d99a6a2c454e
