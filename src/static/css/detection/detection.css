@@ -1,4 +1,4 @@
-.mytask {
+.detection {
   padding: 0 10px;
   height: 100vh;
 }
@@ -40,24 +40,35 @@
   height: 1rem;
   line-height: 1rem;
 }
-.rightContent {
+ /deep/ .van-tab__pane {
   position: relative;
+  height: 100%;
 }
-.rightContent img {
+ /deep/ .van-tab__pane img {
   width: 80px;
   height: 80px;
+  flex: 0.15;
 }
-.rightContent .imgLeft,
-.rightContent .imgright {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
+.detectDisplay {
+  display: flex;
+  align-items: center;
+  border: 1px solid #666;
+  margin: 20px 0;
+  padding: 30px 20px;
 }
-.rightContent .imgLeft {
-  left: 0;
+ /deep/ .van-tab__pane .imgLeft {
+  left: 20px;
 }
-.rightContent .imgright {
+ /deep/ .van-tab__pane .imgRight {
   right: 0;
+}
+.selectArea {
+  flex: 0.85;
+  font-size: 30px;
+}
+.itemList {
+  margin: 20px 0 20px 50px;
+}
+.itemList span {
+  padding-right: 20px;
 }

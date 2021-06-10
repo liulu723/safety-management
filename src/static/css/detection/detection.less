@@ -1,4 +1,4 @@
-.mytask{
+.detection{
   padding: 0 10px;
   height: 100vh;
 }
@@ -50,27 +50,93 @@
   line-height: 1rem;
 
 }
-.rightContent{
+// /deep/ .van-tabs__content{
+//   height: 300px;
+//   border: 1px solid #666;
+
+// }
+
+// /deep/ .van-tab__pane-wrappe{
+//   position: relative;
+//   height: 300px;
+// }
+/deep/ .van-tab__pane{
+  // height: 300px;
   position: relative;
+  height: 100%;
+  // display: flex;
+  // align-items: center;
+  
+  
 }
-.rightContent img{
-  width: 80px;
-  height: 80px;
+  
+  /deep/ .van-tab__pane img{
+    width: 80px;
+    height: 80px;
+    // position: absolute;
+    // // left: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    flex: 0.15;
 }
-.rightContent .imgLeft,
-.rightContent .imgright
-{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
+.detectDisplay{
+  display: flex;
+  align-items: center;
+  border: 1px solid #666;
+  margin: 20px 0;
+  padding: 30px 20px;
+
 }
-.rightContent .imgLeft{
-  left: 0;
+/deep/ .van-tab__pane .imgLeft{
+  left: 20px
 }
-.rightContent .imgright{
-  right: 0;
+/deep/ .van-tab__pane .imgRight{
+  right: 0
+}
+// .rightContent{
+//   margin: auto 0;
+// }
+
+.selectArea{
+  
+  flex: 0.85;
+  
+  font-size: 30px;
+}
+// .rightContent{
+//   position: relative;
+//   // height: 4rem;
+// }
+// .selectArea img{
+//   width: 80px;
+//   height: 80px;
+// }
+// .van-tab__pane::before,
+// .van-tab__pane::after
+// { 
+//   content: "";
+//   display: inline-block;
+//   position: absolute;
+//   left: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 100px;
+//   height: 100px;
+// }
+// .van-tab__pane::before{
+
+//   left: 0;
+//   background: url('~@/public/img/icon_management.png');
+// }
+// .van-tab__pane::after{
+//   right: 0;
+//   background: url('~@/public/img/chevron-right.png');
+// }
+.itemList{
+  margin: 20px 0 20px 50px;
+}
+.itemList span{
+  padding-right: 20px;
 }
 
 
