@@ -1,7 +1,18 @@
 <template>
-  <div>
+  <div class="Approval">
     <base-search></base-search>
-    <base-select></base-select>
+    <div class="scroll-list-wrap">
+      <cube-scroll
+        ref="scroll">
+        <div class="tabNav">
+          <div class="tabNav-item" @click.once="approving='true'">审批中</div>
+          <div class="tabNav-item" @click.once="approved='true'">审批历史</div>
+        </div>
+        <base-select v-if="approving"></base-select>
+        <!-- <base-select></base-select> -->
+      </cube-scroll>
+    </div>
+    
   </div>
 </template>
 
@@ -12,6 +23,8 @@ export default {
   name:'Approval',
   data(){
     return{
+      approving:false,
+      approved:false,
       // result: ['a', 'b'],
       checkList: [],
       options: [
@@ -47,13 +60,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-  .approvalList{
-    padding: 20px;
-  }
-  .cube-checkbox-group{
-    padding: 30px;
-  }
-   /deep/ .cube-checkbox-label{
-     padding-left: 50px;
-    }
+  @import "@/static/css/approval/approval.less";
 </style>

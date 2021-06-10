@@ -9,6 +9,9 @@ import './assets/iconfont/iconfont.css';
 import Vant from 'vant';
 import { RadioGroup, Radio } from 'vant';
 import 'vant/lib/index.css';
+import * as echarts from 'echarts';
+Vue.prototype.$echarts = echarts
+
 Vue.use(Radio);
 Vue.use(RadioGroup);
 Vue.use(Vant);
@@ -16,7 +19,7 @@ Vue.config.productionTip = false
 Vue.component('BScroller', BScroller)
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')

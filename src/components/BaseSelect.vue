@@ -5,7 +5,7 @@
       <div class="rightContent">
         <div class="itemList">{{item.num}}</div>
         <div class="itemList">当前进度：{{item.process}}</div>
-      </div>
+    </div>
     </div>
   </div>
 </template>
