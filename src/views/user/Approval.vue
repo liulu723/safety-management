@@ -60,5 +60,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-  @import "@/static/css/approval/approval.less";
+  @import "@/static/css/user/approval.less";
 </style>

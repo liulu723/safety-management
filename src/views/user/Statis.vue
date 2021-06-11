@@ -33,6 +33,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-  @import "@/static/css/statis/statis.less";
+  @import "@/static/css/user/statis.less";
 </style>
 

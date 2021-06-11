@@ -100,5 +100,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-  @import "@/static/css/examlist/examlist.less";
+  @import "@/static/css/detection/examList.less";
 </style>

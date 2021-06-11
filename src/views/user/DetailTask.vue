@@ -96,5 +96,5 @@ name:'etailTask',
 </script>
 
 <style scoped lang="less"> 
-  @import "@/static/css/detailtask/detailtask.less";
+  @import "@/static/css/user/detailTask.less";
 </style>

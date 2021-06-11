@@ -11,6 +11,7 @@ const paths = [
   'index/',
   'call',
   'detection',
+  'detection/examList',
   'statistics/',
   'company/',
   'apply/',
@@ -18,9 +19,8 @@ const paths = [
   'user/task/',
   'user/approval',
   'user/detailTask',
-  'user/myexpense',
+  'user/expense',
   'user/statis',
-  'detection/examlist'
 ]
 const routers = paths.map(path => {
   let name = path.replace('*', '').split('/')

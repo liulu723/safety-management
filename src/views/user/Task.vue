@@ -73,5 +73,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-  @import "@/static/css/mytask/mytask.less";
+  @import "@/static/css/user/task.less";
 </style>

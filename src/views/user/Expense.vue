@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  @import "@/static/css/myexpense/myexpense.less";
+  @import "@/static/css/user/expense.less";
 
 </style>
 
