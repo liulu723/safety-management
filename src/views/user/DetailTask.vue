@@ -5,12 +5,12 @@
       <cube-scroll>
         <div class="taskDisplay">
         <van-row type="flex" class="lineDisplay"> 
-            <van-col span="4">单号：</van-col>
-            <van-col span="20">KTGD0034</van-col>     
+            <van-col span="6">单号：</van-col>
+            <van-col span="18">KTGD0034</van-col>     
         </van-row > 
         <van-row type="flex" class="lineDisplay">  
-            <van-col span="4">进度条：</van-col>
-            <van-col span="20">************</van-col>     
+            <van-col span="6">进度条：</van-col>
+            <van-col span="18">************</van-col>     
         </van-row>
       </div>
       <div style="height: 0.5rem;width: 100%;background-color:#f7f7f7"></div>

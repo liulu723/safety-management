@@ -4,11 +4,19 @@
     <div class="scroll-list-wrap">
       <cube-scroll
         ref="scroll">
-        <div class="tabNav">
+        <!-- <div class="tabNav">
           <div class="tabNav-item" @click.once="approving='true'">审批中</div>
           <div class="tabNav-item" @click.once="approved='true'">审批历史</div>
-        </div>
-        <base-select v-if="approving"></base-select>
+        </div> -->
+         <van-tabs>
+            <van-tab title="业务系统">
+              <base-select></base-select>
+            </van-tab>
+            <van-tab  title="设备系统">
+              
+            </van-tab>
+          </van-tabs>
+        
         <!-- <base-select></base-select> -->
       </cube-scroll>
     </div>
@@ -23,33 +31,6 @@ export default {
   name:'Approval',
   data(){
     return{
-      approving:false,
-      approved:false,
-      // result: ['a', 'b'],
-      checkList: [],
-      options: [
-        {
-          label: '1',
-          value: '1',
-          // disabled: true
-        },
-        {
-          label: '2',
-          value: '2',
-          // disabled: true
-        },
-        {
-          label: '3',
-          value: '3',
-          // disabled: true
-        },
-        {
-          label: '4',
-          value: '4',
-          // disabled: true
-        }
-      ],
-      selectColor:'red'
     }
   },
   components:{
@@ -61,4 +42,5 @@ export default {
 
 <style scoped lang="less">
   @import "@/static/css/user/approval.less";
+ 
 </style>

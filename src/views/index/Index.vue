@@ -19,7 +19,7 @@
       </ul>
     </div>
     <div class="userList">
-      <ul>
+      <ul class="userlist-lb" :style="{ right: userListLB+'%' }">
         <li v-for="(item, index) in userList" :key="index">
           <p>{{ item.title }}</p>
           <span>{{ item.num }}</span>
@@ -34,9 +34,7 @@
           <li>昨日</li>
           <li>7日</li>
         </ul>
-        <div>
-          
-        </div>
+        <div></div>
       </div>
     </div>
   </BScroller>
@@ -49,6 +47,7 @@ export default {
   name: "index",
   data() {
     return {
+      userListLB: 0,
       selectedLabelDefault: "当前报警",
       tabs: [
         {
@@ -99,8 +98,15 @@ export default {
           title: "进网使用率",
           num: "TOPN3",
         },
+        {
+          title: "CPU使用率",
+          num: "TOPN1",
+        },
       ],
     };
+  },
+  mounted(){
+    this.show()
   },
   methods: {
     clickHandler(label) {
@@ -108,6 +114,16 @@ export default {
     },
     changeHandler(label) {
       console.log(label);
+    },
+    show() {
+      setInterval(() => {
+        this.userListLB = (this.userListLB+1)%34
+        if(this.userListLB==0){
+          this.userList[0] =this.userList[1]
+          let obj = this.userList.shift()
+          this.userList.push(obj)
+        }
+      }, 100);
     },
   },
   components: {
@@ -118,4 +134,11 @@ export default {
 </script>
 <style scoped lang="less">
 @import "@/static/css/index/index.less";
+.userlist {
+  position: relative;
+  overflow: hidden;
+}
+.userlist-lb {
+  position: relative;
+}
 </style>

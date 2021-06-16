@@ -57,7 +57,7 @@ export default {
           icon: "iconlianxiren",
           title: "我的报销",
           infoNo: "",
-          link: "/user/myexpense",
+          link: "/user/expense",
         },
         {
           icon: "iconricheng",

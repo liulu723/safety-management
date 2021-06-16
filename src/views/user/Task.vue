@@ -27,7 +27,17 @@
             <van-button class="btnItem" type="info">统计</van-button>
 
           </div>
-         
+         <!-- <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div>
+         <div>123</div> -->
         </cube-scroll>
       </div>
       

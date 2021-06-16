@@ -104,9 +104,10 @@ export default {
     flex-direction: column;
     span {
       margin-top: 5px;
+      font-size: 28px;
     }
     i{
-      font-size: 36px;
+      font-size: 42px;
     }
   }
 }

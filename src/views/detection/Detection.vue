@@ -16,37 +16,20 @@
           <van-tabs>
             <van-tab title="业务系统">
               <div class="detectDisplay">
-                <img class="imgLeft" src="~@/public/img/icon_management.png" alt="">
+                    <img class="imgLeft" src="~@/public/img/icon_management.png" alt="">
               <!-- <img class="imgRight" src="~@/public/img/chevron-right.png" alt=""> -->
-              <div class="selectArea">
-                
-                <!-- <img src="" alt=""> -->
-                 <!-- <i class="imgLeft">
-                    <img src="~@/public/img/icon_management.png" alt="">
-                  </i>
-                  <i class="imgRight">
-                     <img  src="~@/public/img/chevron-right.png" alt="">
-                  </i> -->
-                <div class="rightContent">
-                 
-                  <!-- <div class="imgLeft">
-                    <img src="~@/public/img/icon_management.png" alt="">
-                  </div>
-                  <div class="imgRight">
-                    <img  src="~@/public/img/chevron-right.png" alt="">
-                  </div> -->
-                  
-                  <div class="itemList">AAA自主服务系统</div>
-                  <div class="itemList">
-                    <span>监控实力：</span>
-                    <span>异常数：</span>
-                  </div>
-                  <!-- <van-icon name="arrow" /> -->
-                </div>
-              </div>
-              <router-link :to="{path:'/detection/examlist'}">
-                <img class="imgRight" src="~@/public/img/chevron-right.png" alt="" >
-              </router-link>
+                    <div class="contentCenter">
+                      <div class="rightContent">
+                        <div class="itemList">AAA自主服务系统</div>
+                        <div class="itemList">
+                          <span>监控实力：</span>
+                          <span>异常数：</span>
+                        </div>
+                      </div>
+                    </div>
+                    <router-link :to="{path:'/detection/examlist'}">
+                      <img class="imgRight" src="~@/public/img/chevron-right.png" alt="" >
+                    </router-link>
               </div>
               
             </van-tab>
@@ -56,18 +39,18 @@
                   <img class="imgLeft" :src="item.imgurl" alt="">
                 
                 <!-- <img class="imgRight" src="~@/public/img/chevron-right.png" alt=""> -->
-                <div  class="selectArea"> 
-                  <div  class="rightContent">
-                    <div class="itemList">{{item.equipment}}</div>
-                    <div class="itemList">
-                      <span>监控实例：{{item.example}}</span>
-                      <span>异常数：{{item.abnormal}}</span>
+                  <div  class="contentCenter"> 
+                    <div  class="rightContent">
+                      <div class="itemList">{{item.equipment}}</div>
+                      <div class="itemList">
+                        <span>监控实例：{{item.example}}</span>
+                        <span>异常数：{{item.abnormal}}</span>
+                      </div>
                     </div>
                   </div>
-              </div>
-              <router-link :to="{path:'/detection/examlist'}">
-                  <img class="imgRight" src="~@/public/img/chevron-right.png" alt="" >
-              </router-link>
+                  <router-link :to="{path:'/detection/examlist'}">
+                      <img class="imgRight" src="~@/public/img/chevron-right.png" alt="" >
+                  </router-link>
               </div>
                
             </van-tab>
